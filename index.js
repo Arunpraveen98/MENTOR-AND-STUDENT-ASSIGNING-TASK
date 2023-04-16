@@ -21,6 +21,11 @@ app.use((req, res, next) => {
   next();
 });
 // --------------
+//? Home Page
+app.get("/", function (req, res) {
+  res.send("🤷‍♂️Welcome to the Mentor and Student Assigning DB API.");
+});
+// --------------
 //? Use the mentor and Student routes
 app.use("/Mentor", MentorRouter);
 app.use("/Student", StudentRouter);
